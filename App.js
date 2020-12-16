@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 
 
-import Product from './App/Screen/Product';
+import Product from './App/Screen/Main';
 
 
 const HomeStack = createStackNavigator(
