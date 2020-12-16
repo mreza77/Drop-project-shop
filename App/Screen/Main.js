@@ -23,9 +23,7 @@ class Product extends Component {
                     initialPage={0}
                     locked={true}
                     scrollWithoutAnimation={false}
-                    renderTabBar={() => <ScrollableTab
-                        style={Styles.ScrollableTabProduct}
-                    />}>
+                    >
                     <Tab heading={
                         <TabHeading style={Styles.TabStyle} >
                             <FontAwesome5 name="coffee" style={Styles.icon} ></FontAwesome5>
