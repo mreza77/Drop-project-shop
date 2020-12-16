@@ -4,9 +4,10 @@ import Axios from 'axios';
 import Global from '../../Global/Global';
 import { Styles } from '../../Style/Style';
 import Alert from 'react-native-android-alert-mjr';
-import LottieView from 'lottie-react-native';
-import ModalProduct from '../../Component/ModalProduct/ModalProductAll';
-const numColumns = 3
+import ModalProduct from '../../Component/ModalProduct/ModalProduct';
+import Function from '../../Function/functionFromatData';
+import Lottie from '../../Component/LoadingFlatlist/LottieLoading';
+
 
 class TabAll extends Component {
   constructor(props) {
@@ -44,22 +45,6 @@ class TabAll extends Component {
   }
 
 
-
-  formatdata(data, numColumns) {
-    const totalRows = Math.floor(data.length / numColumns)
-    let totalLastRows = data.length - (totalRows * numColumns)
-
-    while (totalLastRows !== 0 && totalLastRows !== numColumns) {
-      data.push({ id: "blank", empty: true })
-      totalLastRows++
-    }
-    return data
-  }
-
-  sendItem(item) {
-    this.setState({ dataItem: item })
-  }
-
   render() {
 
     const renderItem1 = ({ item }) => {
@@ -67,12 +52,12 @@ class TabAll extends Component {
       if (item.empty) {
         return <View style={Styles.RenderItemFlatlist1Empty}></View>
       }
-
       return (
         <TouchableOpacity
           onPress={() => {
-            this.setState({ visibleModalProduct: true }, () => {
-              this.sendItem(item)
+            this.setState({
+              visibleModalProduct: true,
+              dataItem: item
             })
           }}
           style={Styles.RenderItemFlatlist1}>
@@ -106,21 +91,15 @@ class TabAll extends Component {
             this.setState({ visibleModalProduct: false })
           }}
           data={this.state.dataItem}
+          Image={require("../../Assets/Pngs/all.png")}
         />
         <FlatList
-          data={this.formatdata(this.state.Beers, numColumns)}
+          data={Function.formatdata(this.state.Beers,  Global.numColumns)}
           renderItem={renderItem1}
-          numColumns={numColumns}
+          numColumns={ Global.numColumns}
           keyExtractor={item => item.id}
           ListFooterComponent={() => this.state.visibleLoading == true ?
-            <View style={Styles.LottieView}>
-              <LottieView
-                source={require("../../Assets/LottieFiles/fastFood.json")}
-                loop
-                autoPlay
-                style={Styles.Lottie}
-              />
-            </View>
+            <Lottie />
             : null
           }
         ></FlatList>
