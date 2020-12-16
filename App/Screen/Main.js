@@ -17,7 +17,7 @@ class Product extends Component {
             <View style={Styles.body}>
                 <StatusBar backgroundColor={"#F22705"} barStyle={"light-content"} />
                 <View style={Styles.ViewLogo}>
-                    <Text style={Styles.TextLogo}>KFC TEHRAN</Text>
+                    <Text style={Styles.TextLogo}>KFC GORGAN</Text>
                 </View>
                 <Tabs
                     initialPage={0}

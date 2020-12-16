@@ -8,15 +8,15 @@ export const Styles = StyleSheet.create({
         backgroundColor: "#fff"
     },
     ViewLogo: {
-        height: hp(10),
+        height: hp(11),
         backgroundColor: "#F22705",
-        justifyContent: "center",
         alignItems: "center"
     },
     TextLogo: {
         fontSize: wp(5),
         color: "#fff",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        marginTop:hp(2)
     },
     icon: {
         fontSize: wp(6),
