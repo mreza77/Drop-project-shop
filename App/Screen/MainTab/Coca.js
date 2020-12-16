@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Styles } from '../../Style/Style';
 import { TabAll, TabPizza, TabSteak } from '../CocaTabs';
 import { Tab, Tabs } from 'native-base';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 class Coca extends Component {
   constructor(props) {
@@ -43,7 +42,6 @@ class Coca extends Component {
             <TabSteak />
           </Tab>
         </Tabs>
-
       </View>
 
     );
