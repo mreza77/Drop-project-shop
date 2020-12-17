@@ -31,6 +31,7 @@ class Cart extends Component {
         })
     }
 
+
     render() {
 
         const renderItem1 = ({ item }) => {
@@ -73,8 +74,7 @@ class Cart extends Component {
                         <TouchableOpacity
                             onPress={() => {
                                 Global.CartItem = Global.CartItem.filter(itm => itm.id != item.id)
-                            }}
-                        >
+                            }}>
                             <FontAwesome5 name="trash-alt" style={Styles.RenderFlatlistIconTrash} ></FontAwesome5>
                         </TouchableOpacity>
                     </View>
@@ -111,7 +111,6 @@ class Cart extends Component {
                                 </View>
                             </View>
                         )}
-
                 </View>
             </ScrollView>
         );
