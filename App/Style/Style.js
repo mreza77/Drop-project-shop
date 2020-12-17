@@ -16,7 +16,7 @@ export const Styles = StyleSheet.create({
         fontSize: wp(5),
         color: "#fff",
         fontWeight: "bold",
-        marginTop:hp(2)
+        marginTop: hp(2)
     },
     icon: {
         fontSize: wp(6),
@@ -112,10 +112,10 @@ export const Styles = StyleSheet.create({
         backgroundColor: "#353535",
         width: wp(90),
         borderRadius: wp(4),
-        alignItems:"flex-end"
+        alignItems: "flex-end"
     },
-    ModalProductView1:{
-        flexDirection:"row-reverse"
+    ModalProductView1: {
+        flexDirection: "row-reverse"
     },
     Closebutton: {
         width: wp(20),
@@ -131,49 +131,194 @@ export const Styles = StyleSheet.create({
     ClosebuttonText: {
         color: "#fff",
         fontSize: wp(4),
-        fontWeight:"bold"
+        fontWeight: "bold"
     },
-    ModalProductImage:{
-        width:wp(23),
-        height:wp(23)
+    ModalProductImage: {
+        width: wp(23),
+        height: wp(23)
     },
-    ModalProductView2:{
-        width:wp(25),
-        height:wp(25),
-        backgroundColor:"#fff",
-        borderRadius:wp(4),
-        marginTop:hp(7),
-        marginRight:wp(5)
+    ModalProductView2: {
+        width: wp(25),
+        height: wp(25),
+        backgroundColor: "#fff",
+        borderRadius: wp(4),
+        marginTop: hp(7),
+        marginRight: wp(5)
     },
-    ModalProductView3:{
-        width:wp(50),
-        borderRadius:wp(4),
-        marginTop:hp(5),
-        marginRight:wp(3),
-        marginBottom:hp(2)
+    ModalProductView3: {
+        width: wp(50),
+        borderRadius: wp(4),
+        marginTop: hp(5),
+        marginRight: wp(3),
+        marginBottom: hp(2)
     },
     itemText: {
         color: "#fff",
         fontSize: wp(4),
-        fontWeight:"400",
-        marginTop:hp(0.3)
+        fontWeight: "400",
+        marginTop: hp(0.3)
     },
-    addtocartbutton:{
-        width:wp(35),
-        height:hp(6),
-        backgroundColor:"#fff",
-        justifyContent:"center",
-        alignItems:"center",
-        borderRadius:wp(3),
-        marginRight:wp(5),
-        marginBottom:hp(2)
+    addtocartbutton: {
+        width: wp(35),
+        height: hp(6),
+        backgroundColor: "#fff",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: wp(3),
+        marginRight: wp(5),
+        marginBottom: hp(2)
     },
-    addtocartbuttonText:{
-        color:"#000",
-        fontWeight:"bold",
-        fontSize:wp(4)
-    }
+    addtocartbuttonText: {
+        color: "#000",
+        fontWeight: "bold",
+        fontSize: wp(4)
+    },
+    outerContentStyle: {
+        width: wp(100)
+    },
+    wrapperStyle: {
+        alignItems: 'center',
+        backgroundColor: "#353535"
+    },
+    lineContainerStyle: {
+        height: hp(4),
+        paddingTop: hp(4)
+    },
+    lineStyle: {
+        width: wp(10),
+        backgroundColor: "#fff",
+        height: hp(0.4),
+        elevation: wp(0.3)
+    },
+    BodyCart: {
+        backgroundColor: "#353535"
+    },
+    TitleView: {
+        justifyContent: "center",
+        alignItems: "center",
+        height: hp(4)
+    },
+    TitleText: {
+        color: "#fff",
+        fontSize: wp(3.8),
+        fontWeight: "bold"
+    },
+    RenderFlatlistCart: {
+        height: hp(11),
+        flexDirection: "row",
+        marginBottom: hp(2)
 
+    },
+    RenderFlatlistView2: {
+        width: wp(18),
+        height: wp(18),
+        backgroundColor: "#fff",
+        borderRadius: wp(4),
+        justifyContent: "center",
+        alignItems: "center",
+        marginLeft: wp(3)
+    },
+    RenderFlatlistImage: {
+        width: wp(15),
+        height: wp(15)
+    },
+    RenderFlatlistView3: {
+        marginLeft: wp(2),
+        width: wp(35),
+        marginTop: hp(0.5)
+    },
+    RenderFlatlistName: {
+        color: "#fff",
+        fontWeight: "bold",
+        fontSize: wp(3.5)
+    },
+    RenderFlatlistTAgline: {
+        color: "#fff",
+        fontSize: wp(3)
+    },
+    RenderFlatlistPrice: {
+        color: "green",
+        fontSize: wp(3.9),
+        fontWeight: "500",
+        marginTop: hp(1)
+    },
+    RenderFlatlistIcon: {
+        color: "#353535",
+        fontSize: wp(4.5)
+    },
+    RenderFlatlistIconTrash: {
+        color: "#fff",
+        fontSize: wp(4.5)
+    },
+    RenderFlatlistTrashButton: {
+        marginTop: hp(4),
+        marginLeft: wp(7)
+    },
+    enderFlatlistKamZiadItemView: {
+        width: wp(25),
+        height: hp(11),
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    RenderFlatlistDashButton: {
+        width: wp(6),
+        height: hp(3),
+        backgroundColor: "#FCBC22",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: wp(2)
+    },
+    RenderFlatlistplusicon: {
+        color: "#353535",
+        fontSize: wp(3)
+    },
+    TextItemNumber: {
+        width: wp(7),
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    TextItemNumbe: {
+        color: "#fff",
+        fontSize: wp(4)
+    },
+    TotalPriceView: {
+        marginLeft: wp(3),
+        alignItems: "center"
+    },
+    TotalPriceText: {
+        color: "#fff",
+        fontSize: wp(4),
+        fontWeight: "bold"
+    },
+    PaymentView: {
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: hp(5),
+        marginTop: hp(2)
+    },
+    PaymentButton: {
+        width: wp(70),
+        height: hp(6),
+        backgroundColor: "#FCBC22",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: wp(3)
+    },
+    PaymentButtonText: {
+        color: "#353535",
+        fontWeight: "bold",
+        fontSize: wp(4)
+    },
+    Emptycartview: {
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    EmptycartText: {
+        color:"#FCBC22",
+        fontSize:wp(3.5),
+        marginVertical:hp(1.5)
+    }
 
 
 

@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import Modal from 'react-native-modal';
 import { Styles } from '../../Style/Style';
 import TextCollapse from 'react-native-text-collapse';
-
+import Global from '../../Global/Global';
 
 class ModalProductSteak extends Component {
     constructor(props) {
@@ -77,6 +77,19 @@ class ModalProductSteak extends Component {
                         </View>
                         <TouchableOpacity
                             style={Styles.addtocartbutton}
+                            onPress={() => {
+                                Global.CartItem.push(
+                                    {
+                                        id: Math.floor(Math.random() * 1000).toString(),
+                                        name: this.state.dataItem.name,
+                                        Tagline: this.state.dataItem.tagline,
+                                        Price: this.state.dataItem.abv,
+                                        Number: 1
+                                    }
+                                )
+                                this.props.onClose();
+                                
+                            }}
                         >
                             <Text style={Styles.addtocartbuttonText}>ADD TO CART</Text>
                         </TouchableOpacity>

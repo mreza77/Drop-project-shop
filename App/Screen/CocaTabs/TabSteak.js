@@ -46,8 +46,7 @@ class TabSteak extends Component {
 
 
   render() {
-
-
+    
     const renderItem1 = ({ item }) => {
       if (item.empty) {
         return <View style={Styles.RenderItemFlatlist1Empty}></View>

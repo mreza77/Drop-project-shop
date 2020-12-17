@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, StatusBar, Text } from 'react-native';
-import { Tab, Tabs, TabHeading, ScrollableTab } from 'native-base';
+import { Tab, Tabs, TabHeading } from 'native-base';
 import { Coca, Food, Offer, Search } from './MainTab';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { Styles } from '../Style/Style';
+import Cart from '../Component/Bottpmsheet/BottomSheet';
 
 class Product extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Product extends Component {
                     initialPage={0}
                     locked={true}
                     scrollWithoutAnimation={false}
-                    >
+                >
                     <Tab heading={
                         <TabHeading style={Styles.TabStyle} >
                             <FontAwesome5 name="coffee" style={Styles.icon} ></FontAwesome5>
@@ -45,6 +46,7 @@ class Product extends Component {
                         </TabHeading>
                     }><Search /></Tab>
                 </Tabs>
+                <Cart />
             </View>
 
 

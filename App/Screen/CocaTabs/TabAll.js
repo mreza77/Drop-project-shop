@@ -45,8 +45,8 @@ class TabAll extends Component {
   }
 
 
-  render() {
 
+  render() {
     const renderItem1 = ({ item }) => {
 
       if (item.empty) {
@@ -94,9 +94,9 @@ class TabAll extends Component {
           Image={require("../../Assets/Pngs/all.png")}
         />
         <FlatList
-          data={Function.formatdata(this.state.Beers,  Global.numColumns)}
+          data={Function.formatdata(this.state.Beers, Global.numColumns)}
           renderItem={renderItem1}
-          numColumns={ Global.numColumns}
+          numColumns={Global.numColumns}
           keyExtractor={item => item.id}
           ListFooterComponent={() => this.state.visibleLoading == true ?
             <Lottie />
