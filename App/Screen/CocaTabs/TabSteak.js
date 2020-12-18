@@ -6,10 +6,11 @@ import { Styles } from '../../Style/Style';
 import Alert from 'react-native-android-alert-mjr';
 import ModalProduct from '../../Component/ModalProduct/ModalProduct';
 import Function from '../../Function/functionFromatData';
+import FunctionCompare from '../../Function/FunctionCompareArray';
 import Lottie from '../../Component/LoadingFlatlist/LottieLoading';
+import Sort from '../../Component/Sort/Sort';
 
-
-class TabSteak extends Component {
+class TabPizza extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,13 +42,31 @@ class TabSteak extends Component {
           })
         })
     })
+    setInterval(() => {
+      this.Filter()
+    }, 1000)
   }
 
 
 
+  Filter() {
+    if (Global.Filter == "Normal") {
+      this.setState({ Beers: this.state.Beers })
+    } else if (Global.Filter == "AscendingAbv") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.AscendingAbv) })
+    } else if (Global.Filter == "DescendingAbv") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.DescendingAbv) })
+    } else if (Global.Filter == "AscendingName") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.AscendingName) })
+    } else if (Global.Filter == "DescendingName") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.DescendingName) })
+    }
+  }
+
   render() {
-    
+
     const renderItem1 = ({ item }) => {
+
       if (item.empty) {
         return <View style={Styles.RenderItemFlatlist1Empty}></View>
       }
@@ -92,10 +111,12 @@ class TabSteak extends Component {
           data={this.state.dataItem}
           Image={require("../../Assets/Pngs/steak.png")}
         />
+        <Sort />
         <FlatList
-          data={Function.formatdata(this.state.Beers,  Global.numColumns)}
+          data={Function.formatdata(this.state.Beers, Global.numColumns)}
+          contentContainerStyle={Styles.contentContainerStyle}
           renderItem={renderItem1}
-          numColumns={ Global.numColumns}
+          numColumns={Global.numColumns}
           keyExtractor={item => item.id}
           ListFooterComponent={() => this.state.visibleLoading == true ?
             <Lottie />
@@ -107,4 +128,4 @@ class TabSteak extends Component {
   }
 }
 
-export default TabSteak;
+export default TabPizza;

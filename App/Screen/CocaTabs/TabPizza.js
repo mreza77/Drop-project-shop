@@ -6,8 +6,9 @@ import { Styles } from '../../Style/Style';
 import Alert from 'react-native-android-alert-mjr';
 import ModalProduct from '../../Component/ModalProduct/ModalProduct';
 import Function from '../../Function/functionFromatData';
+import FunctionCompare from '../../Function/FunctionCompareArray';
 import Lottie from '../../Component/LoadingFlatlist/LottieLoading';
-
+import Sort from '../../Component/Sort/Sort';
 
 class TabPizza extends Component {
   constructor(props) {
@@ -41,8 +42,26 @@ class TabPizza extends Component {
           })
         })
     })
+    setInterval(() => {
+      this.Filter()
+    }, 1000)
   }
 
+
+
+  Filter() {
+    if (Global.Filter == "Normal") {
+      this.setState({ Beers: this.state.Beers })
+    } else if (Global.Filter == "AscendingAbv") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.AscendingAbv) })
+    } else if (Global.Filter == "DescendingAbv") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.DescendingAbv) })
+    } else if (Global.Filter == "AscendingName") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.AscendingName) })
+    } else if (Global.Filter == "DescendingName") {
+      this.setState({ Beers: this.state.Beers.sort(FunctionCompare.DescendingName) })
+    }
+  }
 
   render() {
 
@@ -92,8 +111,10 @@ class TabPizza extends Component {
           data={this.state.dataItem}
           Image={require("../../Assets/Pngs/pizza.png")}
         />
+        <Sort />
         <FlatList
           data={Function.formatdata(this.state.Beers, Global.numColumns)}
+          contentContainerStyle={Styles.contentContainerStyle}
           renderItem={renderItem1}
           numColumns={Global.numColumns}
           keyExtractor={item => item.id}
