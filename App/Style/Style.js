@@ -66,10 +66,9 @@ export const Styles = StyleSheet.create({
     RenderItemFlatlist1: {
         flex: 1 / 3,
         width: wp(27),
-        height: hp(19),
-        marginHorizontal: wp(2),
-        marginVertical: hp(1),
-        alignItems: "center",
+        height: wp(32),
+        marginVertical: hp(0.5),
+        alignItems: "center"
     },
     RenderItemFlatlist1View: {
         width: wp(27),
@@ -83,9 +82,8 @@ export const Styles = StyleSheet.create({
     RenderItemFlatlist1Empty: {
         flex: 1 / 3,
         width: wp(27),
-        height: wp(27),
-        marginHorizontal: wp(2),
-        marginVertical: hp(2),
+        height: wp(32),
+        marginVertical: hp(0.5),
         borderColor: "transparent",
         borderWidth: wp(0.5),
         borderRadius: wp(4),

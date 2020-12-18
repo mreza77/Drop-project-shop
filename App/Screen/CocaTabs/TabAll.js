@@ -50,9 +50,7 @@ class TabPizza extends Component {
 
 
   Filter() {
-    if (Global.Filter == "Normal") {
-      this.setState({ Beers: this.state.Beers })
-    } else if (Global.Filter == "AscendingAbv") {
+    if (Global.Filter == "AscendingAbv") {
       this.setState({ Beers: this.state.Beers.sort(FunctionCompare.AscendingAbv) })
     } else if (Global.Filter == "DescendingAbv") {
       this.setState({ Beers: this.state.Beers.sort(FunctionCompare.DescendingAbv) })
