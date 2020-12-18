@@ -33,7 +33,7 @@ class Cart extends Component {
 
 
     render() {
-
+     
         const renderItem1 = ({ item }) => {
             return (
                 <View style={Styles.RenderFlatlistCart}>

@@ -8,7 +8,7 @@ export const Styles = StyleSheet.create({
         backgroundColor: "#fff"
     },
     ViewLogo: {
-        height: hp(11),
+        height: hp(8),
         backgroundColor: "#F22705",
         alignItems: "center"
     },
@@ -318,6 +318,34 @@ export const Styles = StyleSheet.create({
         color:"#FCBC22",
         fontSize:wp(3.5),
         marginVertical:hp(1.5)
+    },
+    containerStyle:{
+        width:wp(57),
+        height:hp(5)
+    },
+    Stylesort:{
+        backgroundColor:"#353535",
+    },
+    ItemSort:{
+       justifyContent:"flex-start",
+    },
+    dropDownStyle:{
+        backgroundColor:"#353535"
+    },
+    labelStyle:{
+        color:"#fff"
+    },
+    arrowStyle:{
+        backgroundColor:"#fff",
+        borderRadius:wp(3)
+    },
+    BodySort:{
+        marginTop:hp(2),
+        marginLeft:wp(3),
+        marginBottom:hp(1)
+    },
+    contentContainerStyle:{
+        paddingBottom:hp(9)
     }
 
 
